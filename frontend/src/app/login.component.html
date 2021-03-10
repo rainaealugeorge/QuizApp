@@ -1,0 +1,14 @@
+<p>SIGN IN</p>
+<form #form='ngForm' autocomplete="off" (submit)="onSubmit(form)">
+    <div class="form-group">
+        <input name="user" #user="ngModel" [(ngModel)]="service.user" placeholder="UserName" required>
+    </div>
+    <hr>
+    <div class="form-group">
+        <input name="pass" #pass="ngModel" [(ngModel)]="service.pass" placeholder="Password" required>
+    </div>
+    <hr>
+    <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" type="submit" style="margin:8px" color:blue [disabled]="form.invalid">LogIn</button>
+    </div>
+</form>

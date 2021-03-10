@@ -1,0 +1,11 @@
+<button class="btn btn-success btn-lg btn-block" type="submit" style="margin:8px" color:blue (click)=onClick()>LogOut</button>
+<mat-card>
+    <mat-card-content>
+        <H1>Select Quiz</H1>
+        <mat-list *ngFor="let quiz of quizs">
+            <mat-list-item class="clickLink" [routerLink]="['/playQuiz', quiz.id]"> {{quiz.title}} </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+    <mat-card-actions>
+    </mat-card-actions>
+  </mat-card>
